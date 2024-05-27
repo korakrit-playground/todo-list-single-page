@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Todo List Single Page
+A simple todo list app built in React \
+Demo Page : [https://todo-list-single-page.onrender.com/](https://todo-list-single-page.onrender.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dependencies
+- react-router-dom
+- antd
+- lodash
 
 ## Available Scripts
 
