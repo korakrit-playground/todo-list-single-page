@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Input, List, Row, Col, Divider } from "antd";
 import _ from "lodash"
+import Todo from './Todo'
 export default function TodoList() {
   const [todoList, setTodoList] = useState([]);
   const [inputField, setInputField] = useState("")
@@ -43,16 +44,7 @@ export default function TodoList() {
         dataSource={todoList}
         renderItem={todo => (
           <List.Item>
-            <Row style={{ width: '100%'}}>
-              <Col span={20}>
-                <Row justify="start">
-                {todo.task}
-                </Row>
-              </Col>
-              <Col span={4}>
-              <Button type="primary" danger onClick={() => deleteTodoItem(todo.id)}>Delete</Button>
-              </Col>
-            </Row>
+            <Todo deleteTodoItem={deleteTodoItem} setTodoList={setTodoList} todoList={todoList} todo={todo}/>
           </List.Item>
         )}
         />
